@@ -3,6 +3,6 @@
 <InputEncoding>UTF-8<InputEncoding>
 <ShortName>关键词搜索</ShortName>
 <Description>关键词搜索</Description>
-<Image height="16" width="16" type="pictrue/search.icon">images/search.ico</Image>
+<Image height="16" width="16" type="picture/search.icon">images/search.ico</Image>
 <Url type="text/html" template="search.PHP?keyword={searchTerms}"/>
 </OpenSearchDescription>
