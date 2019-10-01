@@ -43,13 +43,14 @@
 	  function search()
 		{
 			alert("ok");
-			if(searchid=="背景图")
+			var st = document.querySelector("input[name='searchid']").value; 
+			if(st="bjt")
 			{
-				<a href="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png"></a>
-			}alert("ok");
+				window.location.href='https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png';
+			}
 			else
 			{
-				window.location.reload=('https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/searcherror.html');
+				window.location.href='https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/searcherror.html';
 			}
 		}
 	</script>
