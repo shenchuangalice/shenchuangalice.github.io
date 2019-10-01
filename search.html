@@ -1,3 +1,21 @@
-var obj =search.value;
-var url='jxb.html?obj='+obj;
-url=encodeURI(url);
+<html>
+<head>
+  <script>
+    var request=
+        {
+          QueryString:function(val)
+          {
+            var uri=window.location.search;
+            var re=new RegExp(""+val+"=([^&?]*)","ig");
+            return((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
+          }
+        }
+  </script>
+</head>
+  <body>
+    <script>
+      var rt=request.QueryString("searchStr");
+      alert(rt);
+    </script>
+  </body>
+</html>
