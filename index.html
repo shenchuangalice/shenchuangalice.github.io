@@ -37,20 +37,20 @@
                     <div class="i-frame" style="width: 528px; height: 266px; display: none;"><span class="func animation"></span></div>
                     <span class="func history"><a href="history.html" target="_blank" title="历史" class="t">历史</a></span>
 		    <span><input type="search" id="searchid"></span>
-                    <span><input type="button" value="搜索"<a href='https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png'> onclick="search()"></a></span>
+                    <span><input type="button" value="搜索"<a href='https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png'></a> onclick="search()"></span>
 	</div>	
 	<script>
 	  function search()
 		{
 			alert("ok");
-			var st = document.querySelector("input[name='searchid']").value; 
-			if(st)
+			var st = document.getElementById("st").value; 
+			if(st=="a")
 			{
-				window.location.href='https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png';
+				location.href='https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png';
 			}
 			else
 			{
-				window.location.href='https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/searcherror.html';
+				location.href='https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/searcherror.html';
 			}
 		}
 	</script>
