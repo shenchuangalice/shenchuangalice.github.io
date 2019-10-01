@@ -56,8 +56,8 @@
 	<script>
 		function search()
 		{
-			var search=document.getElementByld("searchid");
-			window.open("https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/search.html?searchStr="+search.value);
+			var search=document.getElementByld("searchid").value;
+			if(search=="背景图"){document.location.href="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/background.html";}
 		}
 	</script>
 			
