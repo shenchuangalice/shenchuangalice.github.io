@@ -36,28 +36,21 @@
                     <span class="func animation"><a href="animation.html" target="_blank" title="动漫" class="t">动漫</a></span>
                     <div class="i-frame" style="width: 528px; height: 266px; display: none;"><span class="func animation"></span></div>
                     <span class="func history"><a href="history.html" target="_blank" title="历史" class="t">历史</a></span>
-		    <span><input type="text" id="mytext></span>
+		    <span><input type="search" id="searchid"></span>
                     <span><input type="button" value="搜索" onclick="search()"></span>
 	</div>	
 	<script>
 	  function search()
 		{
-			var $_GET = (function(){
-    var url = window.document.location.href.toString();
-    var u = url.split("?");
-    if(typeof(u[1]) == "string"){
-        u = u[1].split("&");
-        var get = {};
-        for(var i in u){
-            var j = u[i].split("=");
-            get[j[0]] = j[1];
-        }
-        return get;
-    } else {
-        return {};
-    }
-})();
-document.getElementById("mytext").value=$_GET['id'];
+			elert("ok");
+			if(searchid=="背景图")
+			{
+				<a href="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png"></a>
+			}
+			else
+			{
+				window.location.reload=('https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/searcherror.html');
+			}
 		}
 	</script>
 			
