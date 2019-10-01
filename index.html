@@ -22,16 +22,19 @@
                     <span><input type="button" value="搜索""onclick="search()"></span>
 	</div>	
 	<script>
-	  document.getElementById("searchid").onclick = function{
-if(search("背景图"))
-{
-	location.href="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png"
-}
-else
-{
-	location.href="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/searcherror.html"
-}
-}
+	functin search()
+		{
+			if(document.getElementById("searchid").value=="背景图")
+			    {
+			    location.href="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png"
+			    }
+			    else
+			    {
+			    location.href="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/searcherror.html"
+			    }
+		}
+	
+	  
 	</script>
 			
 </body>
