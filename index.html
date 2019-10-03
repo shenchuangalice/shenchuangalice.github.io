@@ -1,45 +1,67 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8" />
 	<title>Alice云站</title>
-	<meta name="description" content="由个人开发的视频网站，以收录电影，电视剧和动漫为主。">
-	<meta name="keywords" content="Alice云站,电影,电视剧,动漫,二次元,动画,番剧,新番,追番,日本动漫,国产动画">
+	<meta name="description" content="由个人开发的视频网站，以收录电影、电视剧、动漫为主。">
+	<meta name="keywords" content="Alice云站,电影,电视剧,动漫,二次元,动画,番剧,新番,追番">
+	<style>
+		body {
+			margin:0 auto;
+			width: 900px;
+		}
+		.func_link {
+			margin:0 auto;
+			width:1000px;
+			height:25px;
+			background:#808080
+		}
+		.gonggao {
+			margin:0 auto;
+			width:800px;
+			height:150px;
+			border:1px solid #2c2c2c;
+
+		}
+	</style>
 </head>
 <body>
-	
-	<div style="margin-top:40px">
-		
-    	<img src="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png" width="90%" height="45%"/>
-		<div style="position:absolute; text-align:left; left:10px; top:10px">
-		    <span class="func shouye"><a href="index.html" target="_blank" title="首页" class="t">首页</a></span>
-                    <span class="func moive"><a href="moive.html" target="_blank" title="电影" class="t">电影</a></span>
-                    <span class="func series"><a href="series.html" target="_blank" title="电视剧" class="t">电视剧</a></span>
-                    <span class="func animation"><a href="animation.html" target="_blank" title="动漫" class="t">动漫</a></span>
-                    <div class="i-frame" style="width: 528px; height: 266px; display: none;"><span class="func animation"></span></div>
-                    <span class="func history"><a href="history.html" target="_blank" title="历史" class="t">历史</a></span>
-		    <span><input type="search" id="searchid"></span>
-		    <span><input type="button" value="搜索" onclick=search()></span>
+	<div class="func_link" >
+		<div style="float:left">
+			<span><a href="index.html" target="_blank" title="首页">首页</a></span>
+			<span><a href="movie.html" target="_blank" title="电影">电影</a></span>
+			<span><a href="series.html" target="_blank" title="电视剧">电视剧</a></span>
+			<span><a href="animation.html" target="_blank" title="动漫">动漫</a></span>
 		</div>
-<script>
-	function search(){
-	if(document.getElementById("searchid").value=="测试"||document.getElementById("searchid").value=="测"||document.getElementById("searchid").value=="试")
-	{
-	location.href="animation.html"
-	
-	}
-	else if(document.getElementById("searchid").value=="测试一")
-	{
-	location.href="searcherror.html"
-	}	
-	}
-</script>
-			
-		
-			
+		<div style="float:right">
+			<span><input type="search" id="searchid" placeholder="输入关键词搜索"></span>
+			<span><input type="button" value="搜索" onclick="search()"></span>
+		</div>
+	</div>
+	<div>
+		<img src="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png" href="index.html" target="_blank" title="Alice云站">
+	</div>
+	<hr/>
+	<h1>&nbsp;&nbsp;&nbsp;&nbsp;公告</h1>
+	<div class="gonggao">
+
+	</div>
+	<hr/>
+	<script>
+		function search()
+		{
+			if (document.getElementById("searchid").value == "") {
+
+			}
+			else if (document.getElementById("searchid").value == "") {
+
+			}
+			else
+			{
+				location.href = "searcherror.html";
+			}
+		}
+	</script>
 </body>
-
-
-
-
 </html>
