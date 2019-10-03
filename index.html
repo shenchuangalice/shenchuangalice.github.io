@@ -6,7 +6,7 @@
 	<title>Alice云站</title>
 	<meta name="description" content="由个人开发的视频网站，以收录电影、电视剧、动漫为主。">
 	<meta name="keywords" content="Alice云站,电影,电视剧,动漫,二次元,动画,番剧,新番,追番">
-	
+
 	<style>
 		body {
 			margin: 0 auto;
@@ -34,30 +34,57 @@
 			width: 400px;
 			height: 533px;
 			border: 1px solid #808080;
-			margin-top:20px;
+			margin-top: 20px;
 		}
-		.update{
+
+		.update {
 			float: left;
 			width: 400px;
 			height: 533px;
 			border: 1px solid #808080;
-			margin-top:20px;
+			margin-top: 20px;
 		}
-		
+
 		.foopsi {
 			margin-top: -50px;
 			height: 50px;
 			background-color: #eee;
 			padding: 1990px 0px 10px
 		}
-		.fangwen {
-			margin-top:20px;
-			float:right;
-			width:200px;
-			height:20px;
-			
-			padding:850px 10px 50px;
 
+		.fangwen {
+			margin-top: 20px;
+			float: right;
+			width: 200px;
+			height: 20px;
+			padding: 850px 10px 50px;
+		}
+		.movietype {
+			float:right;
+			position:absolute;
+			left:700px;
+			top:1000px;
+			width:300px;
+			height:250px;
+			border:1px solid #808080;
+		}
+		.seriestype {
+			float: right;
+			position: absolute;
+			left: 700px;
+			top: 1500px;
+			width: 300px;
+			height: 250px;
+			border: 1px solid #808080;
+		}
+		.animatiomtype {
+			float: right;
+			position: absolute;
+			left: 700px;
+			top: 2000px;
+			width: 300px;
+			height: 250px;
+			border: 1px solid #808080;
 		}
 	</style>
 </head>
@@ -76,7 +103,7 @@
 	</div>
 	<div>
 		<a href="index.html">
-		<img src="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png" target="_blank" title="Alice云站">
+			<img src="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png" target="_blank" title="Alice云站">
 		</a>
 	</div>
 	<hr />
@@ -92,15 +119,32 @@
 	<div class="update" align="center">
 		<lengend><a href="moive.html">电影</a></lengend>
 	</div>
+	<hr/>
+	<h3 style="position:absolute;left:700px;top:900px">电影分类</h3>
+	<div class="movietype">
+
+	</div>
 	<hr />
 	<div class="update" align="center">
 		<lengend><a href="series.html">电视剧</a></lengend>
+	</div>
+	<hr/>
+	<h3 style="position:absolute;left:700px;top:1400px">电视剧分类</h3>
+	<div class="seriestype">
+
 	</div>
 	<hr margin-top:10px />
 	<div class="update" align="center">
 		<lengend><a href="animation.html">动漫</a></lengend>
 	</div>
+	<hr />
+	<h3 style="position:absolute;left:700px;top:1900px">动漫分类</h3>
+	<div class="animatiomtype">
+		
+	</div>
 	<!--最新推荐-->
+	<hr/>
+	
 	<!--统计个人访问次数-->
 	<div id="box" class="fangwen">
 	</div>
@@ -120,7 +164,7 @@
 				location.href = "searcherror.html";
 			}
 		}
-		/*网页访问 */
+		/*个人网页访问 */
 		function setStorage() {
 			if (localStorage.counter) {
 				localStorage.counter = Number(localStorage.counter) + 1;
@@ -133,7 +177,7 @@
 		var counter = setStorage();
 		var oBox = document.getElementById('box');
 		oBox.innerHTML = "个人访问网站次数为：" + counter + "次";
-		/*网页访问 */
+			/*个人网页访问 */
 	</script>
 </body>
 </html>
