@@ -1,22 +1,160 @@
 <!DOCTYPE html>
-<html>
+
+<html >
 <head>
-<meta charset=utf-8" />
-<title>动漫</title>
+    <meta charset="utf-8" />
+    <title>Alice云站-动漫</title>
+	<style>
+		body {
+			margin: 0 auto;
+			width: 900px;
+			height: 900px;
+			background-color: #eee;
+		}
+		.animation {
+			margin: 0 auto;
+			width: 1000px;
+			height: 25px;
+			background: #808080
+		}
+		.func_1 {
+			width:900px;
+			height:25px;
+			background-color:#f8faaf;
+		}
+		.func_2 {
+			position:absolute;
+			right:100px;
+			width:900px;
+			height:800px;
+			border:1px solid #808080;
+		}
+		.func_21 {
+			position: absolute;
+			left: 15px;
+			top:15px;
+			width: 850px;
+			height: 200px;
+			border: 1px solid #808080;
+		}
+		.func_211 {
+			position:absolute;
+			left:5px;
+			top:5px;
+			width:190px;
+			height:190px;
+			border:1px solid #808080;
+		}
+		.func_22 {
+			position: absolute;
+			left: 15px;
+			top: 215px;
+			width: 850px;
+			height: 200px;
+			border: 1px solid #808080;
+		}
+		.func_23 {
+			position: absolute;
+			left: 15px;
+			top: 425px;
+			width: 850px;
+			height: 200px;
+			border: 1px solid #808080;
+		}
+		.page {
+			position:absolute;
+			top:700px;
+			width:900px;
+			height:25px;
+			background-color:#808080;
+		}
+	</style>
 </head>
 <body>
-<div style="margin-top:40px">
-		
-    	<img src="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/animation.png" width="90%" height="50%"/>
-		<div style="float:left"; z-index:2; left:10px; top:10px">
-		    <span class="func shouye"><a href="index.html" target="_blank" title="首页" class="t">首页</a></span>
-            <span class="func allanimation"><a href="allanimation.html" target="_blank" title="动漫大全" class="t">动漫大全</a></span>
-            <span class="func guochananimation"><a href="guochananimation.html" target="_blank" title="国产动漫" class="t">国产动漫</a></span>
-            <span class="func japananimation"><a href="japananimation.html" target="_blank" title="日本动漫" class="t">日本动漫</a></span>
-            
-</div>
-<div>
+	<div class="animation">
+		<div style="float:left">
+			<span><a href="index.html" target="_blank" title="首页">首页</a></span>
+			<span><a href="allanimation.html" target="_blank" title="动漫大全">动漫大全</a></span>
+			<span><a href="guochananimation.html" target="_blank" title="国产动漫">国产动漫</a></span>
+			<span><a href="japananimation.html" target="_blank" title="日本动漫">日本动漫</span>
+		</div>
+		<div style="float:right">
+			<span><input type="search" id="searchid" placeholder="输入关键词搜索"></span>
+			<span><input type="button" value="搜索" onclick="search()"></span>
+		</div>
+	</div>
+	<div>
+		<a href="index.html">
+			<img src="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/animation.png">
+		</a>
+	</div>
+	<hr />
+	<div class="func_1">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span><a href="animationjingxuan.html" target="_blank" title="动漫精选">动漫精选</a></span>
+		&nbsp;&nbsp;
+		<span><a href="rexue_anima.html" target="_blank" title="热血">热血</a></span>
+		&nbsp;&nbsp;
+		<span><a href="zhiyu_anima.html" target="_blank" title="治愈">治愈</a></span>
+		&nbsp;&nbsp;
+		<span><a href="xiaoyuan_anima.html" target="_blank" title="校园">校园</a></span>
+		&nbsp;&nbsp;
+		<span><a href="qihuan_anima.html" target="_blank" title="奇幻">奇幻</a></span>
+		&nbsp;&nbsp;
+		<span><a href="gaoxiao_anima.html" target="_blank" title="搞笑">搞笑</a></span>
+	</div>
+	<div class="func_2">
+		<div class="func_21">
+			<p style="position:absolute;left:450px;top:50px">
+				名称：<br />
+				地区：<br />
+				类型：
+			</p>
+			<div class="func_211">
 
+			</div>
+		</div>
+	</div>
+	<div class="func_2" style="margin-top:10px">
+		<div class="func_22">
+			<p style="position:absolute;left:450px;top:50px">
+				名称：<br />
+				地区：<br />
+				类型：
+			</p>
+			<div class="func_211">
+
+			</div>
+		</div>
+	</div><div class="func_2">
+	<div class="func_23" style="margin-top:10px">
+		<p style="position:absolute;left:450px;top:50px">
+			名称：<br />
+			地区：<br />
+			类型：
+		</p>
+		<div class="func_211">
+
+		</div>
+	</div>
+	<div class="page">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="下一页" onclick="tonext()">
+	</div>
 </div>
+	<script>
+		function search() {
+			if (document.getElementById("searchid").value == "") {
+			}
+			else if (document.getElementById("searchid").value == "") {
+			}
+			else {
+				location.href = "searcherror.html";
+			}
+		}
+		function tonext() {
+			location.href="animation_2.html"
+		}
+	</script>
 </body>
 </html>
