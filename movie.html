@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Alice云站-电影</title>
+	<style>
+		body {
+			margin: 0 auto;
+			width: 900px;
+			height: 900px;
+			background-color: #eee;
+		}
+
+		.movie {
+			margin: 0 auto;
+			width: 1000px;
+			height: 25px;
+			background: #808080
+		}
+
+		.func_1 {
+			width: 900px;
+			height: 25px;
+			background-color: #f8faaf;
+		}
+
+		.func_2 {
+			position: absolute;
+			right: 100px;
+			width: 900px;
+			height: 800px;
+			border: 1px solid #808080;
+		}
+
+		.func_21 {
+			position: absolute;
+			left: 15px;
+			top: 15px;
+			width: 850px;
+			height: 200px;
+			border: 1px solid #808080;
+		}
+
+		.func_211 {
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			width: 190px;
+			height: 190px;
+			border: 1px solid #808080;
+		}
+
+		.func_22 {
+			position: absolute;
+			left: 15px;
+			top: 215px;
+			width: 850px;
+			height: 200px;
+			border: 1px solid #808080;
+		}
+
+		.func_23 {
+			position: absolute;
+			left: 15px;
+			top: 425px;
+			width: 850px;
+			height: 200px;
+			border: 1px solid #808080;
+		}
+
+		.page {
+			position: absolute;
+			top: 700px;
+			width: 900px;
+			height: 25px;
+			background-color: #808080;
+		}
+	</style>
+</head>
+<body>
+	<div class="movie">
+		<div style="float:left">
+			<span><a href="index.html" target="_blank" title="首页">首页</a></span>
+			<span><a href="yingyuanmovie.html" target="_blank" title="影院大片">影院大片</a></span>
+			<span><a href="guochanmovie.html" target="_blank" title="国产电影">国产电影</a></span>
+			<span><a href="usmovie.html" target="_blank" title="欧美电影">欧美电影</span>
+		</div>
+		<div style="float:right">
+			<span><input type="search" id="searchid" placeholder="输入关键词搜索"></span>
+			<span><input type="button" value="搜索" onclick="search()"></span>
+		</div>
+	</div>
+	<div>
+		<a href="index.html">
+			<img src="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/back_movie.png">
+		</a>
+	</div>
+	<hr />
+	<div class="func_1">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span><a href="animationjingxuan.html" target="_blank" title="电影精选">电影精选</a></span>
+		&nbsp;&nbsp;
+		<span><a href="rexue_anima.html" target="_blank" title="喜剧">喜剧</a></span>
+		&nbsp;&nbsp;
+		<span><a href="zhiyu_anima.html" target="_blank" title="科幻">科幻</a></span>
+		&nbsp;&nbsp;
+		<span><a href="xiaoyuan_anima.html" target="_blank" title="动作">动作</a></span>
+		&nbsp;&nbsp;
+		<span><a href="qihuan_anima.html" target="_blank" title="犯罪">犯罪</a></span>
+		&nbsp;&nbsp;
+		<span><a href="gaoxiao_anima.html" target="_blank" title="恐怖">恐怖</a></span>
+	</div>
+	<div class="func_2">
+		<div class="func_21">
+			<p style="position:absolute;left:450px;top:50px">
+				名称：<br />
+				地区：<br />
+				类型：
+			</p>
+			<div class="func_211">
+
+			</div>
+		</div>
+	</div>
+	<div class="func_2" style="margin-top:10px">
+		<div class="func_22">
+			<p style="position:absolute;left:450px;top:50px">
+				名称：<br />
+				地区：<br />
+				类型：
+			</p>
+			<div class="func_211">
+
+			</div>
+		</div>
+	</div><div class="func_2">
+		<div class="func_23" style="margin-top:10px">
+			<p style="position:absolute;left:450px;top:50px">
+				名称：<br />
+				地区：<br />
+				类型：
+			</p>
+			<div class="func_211">
+
+			</div>
+		</div>
+		<div class="page">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="下一页" onclick="tonext()">
+		</div>
+	</div>
+	<script>
+		function search() {
+			if (document.getElementById("searchid").value == "") {
+			}
+			else if (document.getElementById("searchid").value == "") {
+			}
+			else {
+				location.href = "searcherror.html";
+			}
+		}
+		function tonext() {
+			location.href="movie_2.html"
+		}
+	</script>
+</body>
+</html>
