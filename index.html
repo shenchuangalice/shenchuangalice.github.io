@@ -6,11 +6,12 @@
 	<title>Alice云站</title>
 	<meta name="description" content="由个人开发的视频网站，以收录电影、电视剧、动漫为主。">
 	<meta name="keywords" content="Alice云站,电影,电视剧,动漫,二次元,动画,番剧,新番,追番">
+	
 	<style>
 		body {
 			margin: 0 auto;
-			width: 900px;
-			height: 2700px;
+			width: 800px;
+			height: 2000px;
 			background-color: #eee;
 		}
 
@@ -28,19 +29,35 @@
 			border: 1px solid #2c2c2c;
 		}
 
-		.updatetj {
+		.updatemovie {
 			float: left;
-			width: 300px;
-			height: 600px;
-			border: 1px solid #808080
+			width: 400px;
+			height: 533px;
+			border: 1px solid #808080;
+			margin-top:20px;
 		}
-
+		.update{
+			float: left;
+			width: 400px;
+			height: 533px;
+			border: 1px solid #808080;
+			margin-top:20px;
+		}
+		
 		.foopsi {
 			margin-top: -50px;
 			height: 50px;
 			background-color: #eee;
-			padding:2690px 0px 10px
+			padding: 1990px 0px 10px
+		}
+		.fangwen {
+			margin-top:20px;
+			float:right;
+			width:200px;
+			height:20px;
 			
+			padding:850px 10px 50px;
+
 		}
 	</style>
 </head>
@@ -61,20 +78,36 @@
 		<img src="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png" href="index.html" target="_blank" title="Alice云站">
 	</div>
 	<hr />
+	<!--公告-->
 	<h1>&nbsp;&nbsp;&nbsp;&nbsp;公告</h1>
 	<div class="gonggao">
 
 	</div>
+	<!--公告-->
 	<hr />
+	<!--最新推荐-->
 	<h2><a href="tuijian_animation.html" target="_blank" title="最新推荐">>>最新推荐<<</a></h2>
-	<div class="updatetj">
-
+	<div class="update" align="center">
+		<lengend><a href="moive.html">电影</a></lengend>
 	</div>
-
+	<hr />
+	<div class="update" align="center">
+		<lengend><a href="series.html">电视剧</a></lengend>
+	</div>
+	<hr margin-top:10px />
+	<div class="update" align="center">
+		<lengend><a href="animation.html">动漫</a></lengend>
+	</div>
+	<!--最新推荐-->
+	<!--统计访问次数-->
+	<div id="box" class="fangwen">
+	</div>
+	<!--统计访问次数-->
 	<footer class="foopsi">
 		© www.shenchuangalice.cn&nbsp;版权所有<br />
 		有任何建议或问题请邮件：<a href="mailto:705013246@qq.com?subject=主题&body=内容">705013246@qq.com</a>联系站长
 	</footer>
+	<hr />
 	<script>
 		function search() {
 			if (document.getElementById("searchid").value == "") {
@@ -85,6 +118,20 @@
 				location.href = "searcherror.html";
 			}
 		}
+		/*网页访问 */
+		function setStorage() {
+			if (localStorage.counter) {
+				localStorage.counter = Number(localStorage.counter) + 1;
+			}
+			else {
+				localStorage.counter = 1;
+			}
+			return localStorage.counter;
+		}
+		var counter = setStorage();
+		var oBox = document.getElementById('box');
+		oBox.innerHTML = "网站被访问次数为：" + counter + "次";
+		/*网页访问 */
 	</script>
 </body>
 </html>
