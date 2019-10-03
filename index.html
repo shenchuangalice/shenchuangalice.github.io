@@ -8,38 +8,44 @@
 	<meta name="keywords" content="Alice云站,电影,电视剧,动漫,二次元,动画,番剧,新番,追番">
 	<style>
 		body {
-			margin:0 auto;
+			margin: 0 auto;
 			width: 900px;
-			height:2700px;
+			height: 2700px;
+			background-color: #eee;
 		}
+
 		.func_link {
-			margin:0 auto;
-			width:1000px;
-			height:25px;
-			background:#808080
+			margin: 0 auto;
+			width: 1000px;
+			height: 25px;
+			background: #808080
 		}
+
 		.gonggao {
 			margin: 0 auto;
 			width: 800px;
 			height: 150px;
 			border: 1px solid #2c2c2c;
 		}
+
 		.updatetj {
-			float:left;
-			width:300px;
-			height:600px;
-			border:1px solid #808080
+			float: left;
+			width: 300px;
+			height: 600px;
+			border: 1px solid #808080
 		}
-		.foopsi{
+
+		.foopsi {
 			margin-top: -50px;
-            		height: 50px;
-            		background-color: #eee;
-            		z-index: 9999;
+			height: 50px;
+			background-color: #eee;
+			padding:2690px 0px 10px
+			
 		}
 	</style>
 </head>
 <body>
-	<div class="func_link" >
+	<div class="func_link">
 		<div style="float:left">
 			<span><a href="index.html" target="_blank" title="首页">首页</a></span>
 			<span><a href="movie.html" target="_blank" title="电影">电影</a></span>
@@ -54,32 +60,28 @@
 	<div>
 		<img src="https://raw.github.com/shenchuangalice/shenchuangalice.github.io/master/images/backgroung.png" href="index.html" target="_blank" title="Alice云站">
 	</div>
-	<hr/>
+	<hr />
 	<h1>&nbsp;&nbsp;&nbsp;&nbsp;公告</h1>
 	<div class="gonggao">
 
 	</div>
-	<hr/>
+	<hr />
 	<h2><a href="tuijian_animation.html" target="_blank" title="最新推荐">>>最新推荐<<</a></h2>
 	<div class="updatetj">
 
 	</div>
-	
-	<div class="foopsi">
-		© www.shenchuangalice.cn&nbsp;版权所有<br/>
-		 有任何建议或问题请邮件：<a href="mailto:705013246@qq.com?subject=主题&body=内容">705013246@qq.com</a>联系站长
-	</div>
-	<script>
-		function search()
-		{
-			if (document.getElementById("searchid").value == "") {
 
+	<footer class="foopsi">
+		© www.shenchuangalice.cn&nbsp;版权所有<br />
+		有任何建议或问题请邮件：<a href="mailto:705013246@qq.com?subject=主题&body=内容">705013246@qq.com</a>联系站长
+	</footer>
+	<script>
+		function search() {
+			if (document.getElementById("searchid").value == "") {
 			}
 			else if (document.getElementById("searchid").value == "") {
-
 			}
-			else
-			{
+			else {
 				location.href = "searcherror.html";
 			}
 		}
