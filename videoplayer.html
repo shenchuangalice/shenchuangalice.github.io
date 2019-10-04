@@ -1,5 +1,149 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+    <meta charset="utf-8" />
+    <title>视频播放-死亡笔记01</title>
+	<style>
+		body {
+			width:900px;
+			height:1200px;
+			background-color:#ffffff;
+		}
+		.videoplayer {
+			position:absolute;
+			left:30px;
+			top:200px;
+			width: 600px;
+			height: 400px;
+			border: 1px solid #808080;
+		}
+		.result {
+			width:50px;
+			height:4px;
+			
+		}
+		.t1{
+			position:absolute;
+			top:380px;
+			left:50px;
+		}
+		.btn {
+			position:absolute;
+			top:350px;
+			left:200px;
+		}
+	</style>
 </head>
+<body>
+	<div class="videoplayer">
+		<div>
+			<video id="videoplayer" src="deathnote_1.mp4" onprogress="checkProgress()" onplay="checkLoad()" onTimeupdate="update()" controls="controls" width:600px height:400px></video>
+			<div class="btn">
+				<input type="button" id="btnplay" onclick="playOrpause()" value="播放" />
+				<input type="button" id="btnSpeedUp" onclick="volumeUp()" value="提高音量">
+				<input type="button" id="btnSpeedDown" onclick="volumeDown()" value="降低音量">
+			</div>
+			<div id="t1"></div>
+		</div>
+		<div id="result" class="result" align="center"></div>
+	</div>
+	<script>
+		/*加载媒体检测*/
+		function checkProgress() {
+			var video = document.getElementById("videoplayer");
+			var state = video.networkState;
+			if (state == "0") {
+				result.innerHTML = "媒体信息正在初始化";
+			}
+			else if (state == "1") {
+				result.innerHTML = "媒体加载完毕，单击播放";
+			}
+			else if (state == "2") {
+				result.innerHTML = "正在加载媒体信息";
+			}
+			else {
+				result.innerHTML = "媒体加载失败";
+			}
+		}
+		/*导入媒体检测*/
+		function checkLoad() {
+			var video = document.getElementById("videoplayer");
+			var state = video.readyState;
+			var result = document.getElementById("result");
+			if (state == "0") {
+				result.innerHTML = "无可播放媒体";
+			}
+			else if (state == "1") {
+				result.innerHTML == "无法播放媒体信息";
+			}
+			else if (state == "2") {
+				result.innerHTML == "已获取后续媒体信息，正常播放";
+			}
+			else {
+				result.innerHTML == "已充分获取媒体信息资源";
+			}
+		}
+		/*播放时长*/
+		function update() {
+			var video = document.getElementById("videoplayer");
+			var t1 = document.getElementById("t1");
+			var duration = video.video.duration;
+			var currentTime = video.currentTime;
+			t1.innerHTML = Math.floor(currentTime) + "/" + Math.floor(duration)+"分"
+		}
+		var volume = 1;
+		var video = document.getElementById("videoplayer");
+		var playbtn = document.getElementById("btnplay");
+		var btnVolumeUp = document.getElementById("btnVolumeUp");
+		var btnVolumeDown = document.getElementById("btnVolumeDown");
+		/*播放或暂停*/
+		function playOrpause() {
+			var progressTime = document.getElementById("progressTime");
+			progressTime.style.display = "";
+			if (video.pause) {
+				playbtn.value = "暂停";
+				video.play();
+				video.volume = volume;
+				btnVolumeUp.disabled = "";
+				btnVolumeDown.disabled = "";
+			}
+			else {
+				playbtn.value = "播放";
+				video.pause();
+				btnVolumeUp.disabled = "disabled";
+				btnVolumeDown.disabled = "disabled";
+			}
+		}
+
+		/*提高音量*/
+		function volumeUp() {
+			if (video.volume < 1) {
+				video.volume += 0.1;
+				if (video.volume > 0) {
+					video.muted = false;
+				}
+			}
+		}
+		/*降低音量*/
+		function volumeDown() {
+			if (video.volume > 0) {
+				video.volume -= 0.1;
+				if (video.volume == 0) {
+					video.muted = true;
+				}
+			}
+		}
+		/*从单击位置播放*/
+		function progressOnclick(event) {
+			var progress = document.getElementById("progress");
+			if (event.offsetX) {
+				video.currentTime = video.duration * (event.offsetX / progress.clientWidth);
+			}
+			else {
+				video.currentTime = video.duration * (event.clientX / progress.clientWidth);
+			}
+		}
+	</script>
+</body>
 </html>
