@@ -162,10 +162,7 @@
 	<!--最新推荐-->
 	<hr/>
 	
-	<!--统计个人访问次数-->
-	<div id="box" class="fangwen">
-	</div>
-	<!--统计个人访问次数-->
+	
 	<footer class="foopsi">
 		© www.shenchuangalice.cn&nbsp;版权所有<br />
 		有任何建议或问题请邮件：<a href="mailto:705013246@qq.com?subject=&body=">705013246@qq.com</a>联系站长
@@ -186,20 +183,7 @@
 				location.href = "searcherror.html";
 			}
 		}
-		/*个人网页访问 */
-		function setStorage() {
-			if (localStorage.counter) {
-				localStorage.counter = Number(localStorage.counter) + 1;
-			}
-			else {
-				localStorage.counter = 1;
-			}
-			return localStorage.counter;
-		}
-		var counter = setStorage();
-		var oBox = document.getElementById('box');
-		oBox.innerHTML = "个人访问网站次数为：" + counter + "次";
-			/*个人网页访问 */
+		
 	</script>
 </body>
 </html>
